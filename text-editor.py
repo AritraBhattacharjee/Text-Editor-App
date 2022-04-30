@@ -14,13 +14,16 @@ class TextEditor(Tk):
         super().__init__()
         self.title("Text Editor")
         self.geometry("644x688")
-        # self.iconbitmap()
+        self.iconbitmap("icon2.ico")
 
         # Adding text area
         self.TextArea = Text(self, font="lucida 13")
         self.TextArea.pack(fill=BOTH,expand=True)
         self.file = None
-
+        # adding Icon
+        photo = PhotoImage(file="icon2.ico")
+        # photo = PhotoImage(file="icon.png")
+        self.iconphoto(False,photo)
         # Menu Bar
         MenuBar = Menu(self)
         #File Meny
